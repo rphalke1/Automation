@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [FirstSuite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="web.base.Listeners"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="YahooTest(failed)">
+    <classes>
+      <class name="web.tests.YahooSearchTest">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="verifyYahooTitle"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- web.tests.YahooSearchTest -->
+    </classes>
+  </test> <!-- YahooTest(failed) -->
+  <test thread-count="5" parallel="tests" name="MVNTest(failed)">
+    <classes>
+      <class name="web.tests.MvnRepositoryTest">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="browserStackTest"/>
+          <include name="mvnRepositorySearch"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- web.tests.MvnRepositoryTest -->
+    </classes>
+  </test> <!-- MVNTest(failed) -->
+  <test thread-count="5" parallel="tests" name="ReqResTest(failed)">
+    <classes>
+      <class name="web.tests.ReqResTest">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="reqResTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- web.tests.ReqResTest -->
+    </classes>
+  </test> <!-- ReqResTest(failed) -->
+</suite> <!-- Failed suite [FirstSuite] -->
